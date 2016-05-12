@@ -26,7 +26,7 @@ public class DateConverter implements Converter<Date> {
     try {
       return DATE_FORMAT.parse(arg);
     } catch (ParseException e) {
-      throw new SlimError(String.format("message:<<Can't convert %s to date.>>", arg), e);
+      throw new SlimError(String.format("message:<<Can't convert %s to date. Date must be in the dd-MMM-yyyy format>>", arg), e);
     }
   }
 }
